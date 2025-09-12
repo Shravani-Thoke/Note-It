@@ -1,0 +1,58 @@
+Here is a short step-by-step guide to deploying a Vite React app to GitHub Pages.
+
+-----
+
+### \#\# 1. Configure Vite
+
+In your **`vite.config.js`** file, set the `base` property to your repository's name.
+
+```javascript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  base: '/your-repo-name/', // Add this line
+  plugins: [react()],
+})
+```
+
+-----
+
+### \#\# 2. Install `gh-pages`
+
+Install the deployment helper package as a development dependency.
+
+```bash
+npm install gh-pages --save-dev
+```
+
+-----
+
+### \#\# 3. Update `package.json`
+
+Add `predeploy` and `deploy` scripts to your `package.json` file.
+
+```json
+{
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}
+```
+
+-----
+
+### \#\# 4. Run Deployment
+
+Execute the deploy script from your terminal.
+
+```bash
+npm run deploy
+```
+
+-----
+
+### \#\# 5. Set GitHub Pages Source
+
+In your GitHub repository settings, go to **Pages** and set the deployment source branch to **`gh-pages`**.

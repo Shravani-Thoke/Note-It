@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import './App.css'
 import Background from './Components/Background'
 import Foreground from './Components/Foreground'
@@ -8,6 +7,7 @@ import Sidebar from './Components/Sidebar'
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
+  
 
   return (
 

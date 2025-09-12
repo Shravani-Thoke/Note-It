@@ -1,10 +1,10 @@
 import React from 'react'
 import Card from './Card'
 
-const Foreground = ({searchQuery}) => {
+const Foreground = ({ searchQuery }) => {
   return (
-    <div className='fixed w-full h-full top-24 left-5 right-20 z-[3]'>
-        <Card searchQuery={searchQuery}/>
+    <div className='absolute top-24 left-0 right-0 bottom-0 overflow-auto w-full z-10'>
+        <Card searchQuery={searchQuery} />
     </div>
   )
 }
